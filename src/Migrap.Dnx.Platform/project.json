@@ -1,0 +1,16 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "Migrap.Dnx.Platform Class Library",
+  "authors": [ "michael" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "Microsoft.Dnx.Runtime.Abstractions": "1.0.0-beta8"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}
