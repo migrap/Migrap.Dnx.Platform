@@ -2,27 +2,27 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Migrap.Dnx.Platform {
-    public static partial class PlatformExtensions {
+namespace Migrap.Dnx.Platform {    
+    public static partial class PlatformEnvironmentExtensions {
         private static bool? _windows;
         private static bool? _mono;
         private static bool? _nano;
 
-        public static bool Windows(this IPlatformExtension extension, IRuntimeEnvironment runtime) {
-            if(_windows== null) {
-                _windows= runtime.RuntimeType.Equals(nameof(Windows), StringComparison.OrdinalIgnoreCase);
+        public static bool Windows(this IPlatformEnvironmentExtension extension, IRuntimeEnvironment runtime) {
+            if(_windows == null) {
+                _windows = runtime.RuntimeType.Equals(nameof(Windows), StringComparison.OrdinalIgnoreCase);
             }
-            return _windows.Value;             
+            return _windows.Value;
         }
 
-        public static bool Mono(this IPlatformExtension extension, IRuntimeEnvironment runtime) {
+        public static bool Mono(this IPlatformEnvironmentExtension extension, IRuntimeEnvironment runtime) {
             if(_mono == null) {
                 _mono = runtime.RuntimeType.Equals(nameof(Mono), StringComparison.OrdinalIgnoreCase);
             }
             return _mono.Value;
         }
 
-        public static bool Nano(this IPlatformExtension extension, IRuntimeEnvironment runtime) {
+        public static bool Nano(this IPlatformEnvironmentExtension extension, IRuntimeEnvironment runtime) {
             if(_nano == null) {
                 var version = new Version(runtime.OperatingSystemVersion ?? "");
 
