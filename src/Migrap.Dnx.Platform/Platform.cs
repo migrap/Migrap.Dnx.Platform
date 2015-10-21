@@ -1,9 +1,7 @@
 ﻿using Microsoft.Dnx.Runtime;
 using System;
-using System.Runtime.InteropServices;
 
 namespace Migrap.Dnx.Platform {
-
     public partial class Platform {
         private readonly IRuntimeEnvironment _runtime;
 
@@ -14,7 +12,5 @@ namespace Migrap.Dnx.Platform {
         public bool Is(Func<IPlatformExtension, Func<IRuntimeEnvironment,bool>> platform) {
             return true;
         }
-    }
-
-    
+    }    
 }

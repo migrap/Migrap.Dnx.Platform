@@ -1,9 +1,6 @@
 ﻿using Microsoft.Dnx.Runtime;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 
 namespace Migrap.Dnx.Platform {
     public static partial class PlatformExtensions {
